@@ -7,7 +7,7 @@ const AssignmentPage = () => {
   const [error, setError] = useState('');
   const fetchAssignments = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/assignments', {
+      const response = await fetch('https://amigo-soft-solution-assignment-2.onrender.com/api/assignments', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const AssignmentPage = () => {
     formData.append('subject', subject);
   
     try {
-      const response = await fetch('http://localhost:5000/api/assignments/upload', {  
+      const response = await fetch('https://amigo-soft-solution-assignment-2.onrender.com/api/assignments/upload', {  
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`,  
@@ -113,7 +113,7 @@ const AssignmentPage = () => {
             return (
               <li key={assignment._id} className="mb-4 border-b border-gray-300 pb-4">
                 <a
-                  href={`http://localhost:5000/uploads/assignments/${fileName}`} 
+                  href={`https://amigo-soft-solution-assignment-2.onrender.com/uploads/assignments/${fileName}`} 
                   className="text-lg text-blue-600 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"

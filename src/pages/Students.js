@@ -14,7 +14,7 @@ const StudentsTable = () => {
     const fetchStudents = async () => {
       try {
         const token = localStorage.getItem('jwtToken');
-        const response = await fetch('http://localhost:5000/api/auth/students', {
+        const response = await fetch('https://amigo-soft-solution-assignment-2.onrender.com//api/auth/students', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const StudentsTable = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('jwtToken');
-      const response = await fetch(`http://localhost:5000/api/auth/students/${id}`, {
+      const response = await fetch(`https://amigo-soft-solution-assignment-2.onrender.com/api/auth/students/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const StudentsTable = () => {
       console.log('Form Data:', formData); // Debugging line
       console.log('Editing Student ID:', editingStudent); // Debugging line
   
-      const response = await fetch(`http://localhost:5000/api/auth/students/${editingStudent}`, {
+      const response = await fetch(`https://amigo-soft-solution-assignment-2.onrender.com/api/auth/students/${editingStudent}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

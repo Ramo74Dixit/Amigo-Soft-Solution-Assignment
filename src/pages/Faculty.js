@@ -14,7 +14,7 @@ const FacultyTable = () => {
     const fetchFaculty = async () => {
       try {
         const token = localStorage.getItem('jwtToken');
-        const response = await fetch('http://localhost:5000/api/auth/faculty', {
+        const response = await fetch('https://amigo-soft-solution-assignment-2.onrender.com/api/auth/faculty', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const FacultyTable = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('jwtToken');
-      const response = await fetch(`http://localhost:5000/api/auth/faculty/${id}`, {
+      const response = await fetch(`https://amigo-soft-solution-assignment-2.onrender.com/api/auth/faculty/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const FacultyTable = () => {
   const handleSaveEdit = async () => {
     try {
       const token = localStorage.getItem('jwtToken');
-      const response = await fetch(`http://localhost:5000/api/auth/faculty/${editingFaculty}`, {
+      const response = await fetch(`https://amigo-soft-solution-assignment-2.onrender.com/api/auth/faculty/${editingFaculty}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ const AttendancePage = () => {
     const fetchStudents = async () => {
       try {
         const token = localStorage.getItem('jwtToken');
-        const response = await fetch('http://localhost:5000/api/auth/students', {
+        const response = await fetch('https://amigo-soft-solution-assignment-2.onrender.com/api/auth/students', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const AttendancePage = () => {
   const handleSubmit = async () => {
     try {
       const token = localStorage.getItem('jwtToken');
-      const response = await fetch('http://localhost:5000/api/attendance', {
+      const response = await fetch('https://amigo-soft-solution-assignment-2.onrender.com/api/attendance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
